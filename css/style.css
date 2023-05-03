@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsla(40, 25%, 66%, 1);
+}
+
+header {
+    border: solid 2px black;
+    position: sticky;
+    top: 0;
+    color: white;
+    background-color: hsla(40, 25%, 20%, 1);
+    padding: 5px;
+    z-index: 10;
+}
+
+main {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-columns: auto;
+}
+
+
+.card-img-top {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+}
+
+.card-img-top:hover {
+    object-fit: contain;
+}
+
+h5 {
+    font-weight: bold;
+}
+
+label {
+    padding-left: 2em;
+}
