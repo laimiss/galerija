@@ -28,7 +28,7 @@ async function updateGallery() {
 function createThumbnail(artItem) {
     const card = document.createElement('div')
     card.classList.add("card")
-    
+
     const image = document.createElement('img')
     const imageUrl = `https://www.artic.edu/iiif/2/${artItem.image_id}/full/843,/0/default.jpg`
     image.src = imageUrl
@@ -54,7 +54,21 @@ function createThumbnail(artItem) {
     return card
 }
 
-document.getElementById("puslapis").addEventListener("change",updateGallery)
-document.getElementById("limitas").addEventListener("change",updateGallery)
+document.querySelector("button[name='puslapisMinus']").addEventListener("click", () => {
+    document.getElementById("puslapis").stepDown()
+    updateGallery()
+})
+document.querySelector("button[name='puslapisPlus']").addEventListener("click", () => {
+    document.getElementById("puslapis").stepUp()
+    updateGallery()
+})
+document.querySelector("button[name='limitasMinus']").addEventListener("click", () => {
+    document.getElementById("limitas").stepDown()
+    updateGallery()
+})
+document.querySelector("button[name='limitasPlus']").addEventListener("click", () => {
+    document.getElementById("limitas").stepUp()
+    updateGallery()
+})
 
 updateGallery()

@@ -9,6 +9,7 @@ body {
 }
 
 header {
+    display: flex;
     border: solid 2px black;
     position: sticky;
     top: 0;
@@ -16,6 +17,7 @@ header {
     background-color: hsla(40, 25%, 20%, 1);
     padding: 5px;
     z-index: 10;
+    justify-content: space-evenly;
 }
 
 main {
@@ -40,6 +42,7 @@ h5 {
     font-weight: bold;
 }
 
-label {
-    padding-left: 2em;
+
+input[type="number"] {
+    appearance: textfield;
 }
